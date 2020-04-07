@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://suyunzzz.github.io">
-  <title>2018-激光与光电子学进展-决策树约束的建筑物点云提取方法 | 那些花儿</title>
+  <title>2018-【激光与光电子学进展】-决策树约束的建筑物点云提取方法 | 那些花儿</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="摘要 针对目前机载点云数据量大，建筑物点云不均匀等问题提出一种面向对象构建决策树的建筑点云高精度提取方法。决策树可以同时处理多种特征，并且对缺失值不敏感，&#x3D;&#x3D;利用点云中每个对象的高程信息、粗糙度、法向量分布三个特征，基于信息熵的变化&#x3D;&#x3D;，有监督地从样本数据中学习得到正确的分类器，进而完成待处理点云中建筑物的提取。">
+  <meta name="description" content="摘要 针对目前机载点云数据量大，建筑物点云不均匀等问题提出一种面向对象构建决策树的建筑点云高精度提取方法。决策树可以同时处理多种特征，并且对缺失值不敏感，利用点云中每个对象的高程信息、粗糙度、法向量分布三个特征，基于信息熵的变化，有监督地从样本数据中学习得到正确的分类器，进而完成待处理点云中建筑物的提取。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2018-激光与光电子学进展-决策树约束的建筑物点云提取方法">
+<meta property="og:title" content="2018-【激光与光电子学进展】-决策树约束的建筑物点云提取方法">
 <meta property="og:url" content="https://suyunzzz.github.io/2020/04/07/2018-%E3%80%90%E6%BF%80%E5%85%89%E4%B8%8E%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6%E8%BF%9B%E5%B1%95%E3%80%91-%E5%86%B3%E7%AD%96%E6%A0%91%E7%BA%A6%E6%9D%9F%E7%9A%84%E5%BB%BA%E7%AD%91%E7%89%A9%E7%82%B9%E4%BA%91%E6%8F%90%E5%8F%96%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="那些花儿">
-<meta property="og:description" content="摘要 针对目前机载点云数据量大，建筑物点云不均匀等问题提出一种面向对象构建决策树的建筑点云高精度提取方法。决策树可以同时处理多种特征，并且对缺失值不敏感，&#x3D;&#x3D;利用点云中每个对象的高程信息、粗糙度、法向量分布三个特征，基于信息熵的变化&#x3D;&#x3D;，有监督地从样本数据中学习得到正确的分类器，进而完成待处理点云中建筑物的提取。">
+<meta property="og:description" content="摘要 针对目前机载点云数据量大，建筑物点云不均匀等问题提出一种面向对象构建决策树的建筑点云高精度提取方法。决策树可以同时处理多种特征，并且对缺失值不敏感，利用点云中每个对象的高程信息、粗糙度、法向量分布三个特征，基于信息熵的变化，有监督地从样本数据中学习得到正确的分类器，进而完成待处理点云中建筑物的提取。">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200407210332354.png#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200407210743857.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200407210838207.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="article:published_time" content="2020-04-07T13:13:36.000Z">
-<meta property="article:modified_time" content="2020-04-07T13:15:23.104Z">
+<meta property="article:modified_time" content="2020-04-07T13:20:38.997Z">
 <meta property="article:author" content="Su Yunzheng">
 <meta property="article:tag" content="论文阅读">
 <meta name="twitter:card" content="summary">
@@ -214,7 +214,7 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      2018-激光与光电子学进展-决策树约束的建筑物点云提取方法
+      2018-【激光与光电子学进展】-决策树约束的建筑物点云提取方法
     </h1>
   
 
@@ -240,7 +240,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><ul>
-<li>针对目前机载点云数据量大，建筑物点云不均匀等问题提出一种面向对象构建决策树的建筑点云高精度提取方法。决策树可以同时处理多种特征，并且对缺失值不敏感，==利用点云中每个对象的高程信息、粗糙度、法向量分布三个特征，基于信息熵的变化==，有监督地从样本数据中学习得到正确的分类器，进而完成待处理点云中建筑物的提取。<a id="more"></a>
+<li>针对目前机载点云数据量大，建筑物点云不均匀等问题提出一种面向对象构建决策树的建筑点云高精度提取方法。决策树可以同时处理多种特征，并且对缺失值不敏感，利用点云中每个对象的高程信息、粗糙度、法向量分布三个特征，基于信息熵的变化，有监督地从样本数据中学习得到正确的分类器，进而完成待处理点云中建筑物的提取。<a id="more"></a>
 <h3 id="研究方法"><a href="#研究方法" class="headerlink" title="研究方法"></a>研究方法</h3></li>
 </ul>
 <ol>
@@ -265,7 +265,7 @@ var _hmt = _hmt || [];
 		  
 		  <br>
 		  <strong>本文链接：</strong>
-		  <a href="https://suyunzzz.github.io/2020/04/07/2018-【激光与光电子学进展】-决策树约束的建筑物点云提取方法/" title="2018-激光与光电子学进展-决策树约束的建筑物点云提取方法" target="_blank">https://suyunzzz.github.io/2020/04/07/2018-【激光与光电子学进展】-决策树约束的建筑物点云提取方法/</a>
+		  <a href="https://suyunzzz.github.io/2020/04/07/2018-【激光与光电子学进展】-决策树约束的建筑物点云提取方法/" title="2018-【激光与光电子学进展】-决策树约束的建筑物点云提取方法" target="_blank">https://suyunzzz.github.io/2020/04/07/2018-【激光与光电子学进展】-决策树约束的建筑物点云提取方法/</a>
 		  <br>
 		  <strong>版权声明：</strong>
 		  本作品采用
@@ -571,15 +571,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">树莓派</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">tools</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">树莓派</a>
               </li>
             
             <div class="clearfix"></div>
