@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://suyunzzz.github.io">
-  <title>Tag: tools | 那些花儿</title>
+  <title>2018-激光与光电子学进展-决策树约束的建筑物点云提取方法 | 那些花儿</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="那些花儿">
-<meta property="og:url" content="https://suyunzzz.github.io/tags/tools/index.html">
+  <meta name="description" content="摘要 针对目前机载点云数据量大，建筑物点云不均匀等问题提出一种面向对象构建决策树的建筑点云高精度提取方法。决策树可以同时处理多种特征，并且对缺失值不敏感，&#x3D;&#x3D;利用点云中每个对象的高程信息、粗糙度、法向量分布三个特征，基于信息熵的变化&#x3D;&#x3D;，有监督地从样本数据中学习得到正确的分类器，进而完成待处理点云中建筑物的提取。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2018-激光与光电子学进展-决策树约束的建筑物点云提取方法">
+<meta property="og:url" content="https://suyunzzz.github.io/2020/04/07/2018-%E3%80%90%E6%BF%80%E5%85%89%E4%B8%8E%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6%E8%BF%9B%E5%B1%95%E3%80%91-%E5%86%B3%E7%AD%96%E6%A0%91%E7%BA%A6%E6%9D%9F%E7%9A%84%E5%BB%BA%E7%AD%91%E7%89%A9%E7%82%B9%E4%BA%91%E6%8F%90%E5%8F%96%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="那些花儿">
+<meta property="og:description" content="摘要 针对目前机载点云数据量大，建筑物点云不均匀等问题提出一种面向对象构建决策树的建筑点云高精度提取方法。决策树可以同时处理多种特征，并且对缺失值不敏感，&#x3D;&#x3D;利用点云中每个对象的高程信息、粗糙度、法向量分布三个特征，基于信息熵的变化&#x3D;&#x3D;，有监督地从样本数据中学习得到正确的分类器，进而完成待处理点云中建筑物的提取。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200407210332354.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200407210743857.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200407210838207.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="article:published_time" content="2020-04-07T13:13:36.000Z">
+<meta property="article:modified_time" content="2020-04-07T13:15:23.104Z">
 <meta property="article:author" content="Su Yunzheng">
+<meta property="article:tag" content="论文阅读">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200407210332354.png#pic_center">
   
     <link rel="alternative" href="/atom.xml" title="那些花儿" type="application/atom+xml">
   
@@ -198,144 +207,247 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-2018-【激光与光电子学进展】-决策树约束的建筑物点云提取方法" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2018-激光与光电子学进展-决策树约束的建筑物点云提取方法
+    </h1>
+  
+
+		
+		<!--显示阅读次数-->
+		
+		  <br/>
+		  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+		  <span class="icon-sort"></span>
+		  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+					阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+		  </span>
+		  </a>
+		  
+		  
+        
+        <a href="/2020/04/07/2018-%E3%80%90%E6%BF%80%E5%85%89%E4%B8%8E%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6%E8%BF%9B%E5%B1%95%E3%80%91-%E5%86%B3%E7%AD%96%E6%A0%91%E7%BA%A6%E6%9D%9F%E7%9A%84%E5%BB%BA%E7%AD%91%E7%89%A9%E7%82%B9%E4%BA%91%E6%8F%90%E5%8F%96%E6%96%B9%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2020-04-07T13:13:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-07</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><ul>
+<li>针对目前机载点云数据量大，建筑物点云不均匀等问题提出一种面向对象构建决策树的建筑点云高精度提取方法。决策树可以同时处理多种特征，并且对缺失值不敏感，==利用点云中每个对象的高程信息、粗糙度、法向量分布三个特征，基于信息熵的变化==，有监督地从样本数据中学习得到正确的分类器，进而完成待处理点云中建筑物的提取。<a id="more"></a>
+<h3 id="研究方法"><a href="#研究方法" class="headerlink" title="研究方法"></a>研究方法</h3></li>
+</ul>
+<ol>
+<li>滤波。采用移动曲面滤波方法，即利用一个不断移动的窗口寻找窗口内高程最低点，采用二项式方程拟合计算得到一个粗略的地形模型。由于地面点高程较低，因此脚点的真实高程与邻域点计算生成得到的曲面模型中的拟合高程值相差较小，当激光点与曲面模型间的距离小于一定阈值时，可判断为地面点，否则判断为非地面点。</li>
+<li>构建决策树。决策树的核心思想即在一个数据集中找到一个最优特征，在该特征的限制下，数据的不确定性（熵）可以得到最大限度的降低，即信息增益或信息增益率最大。任何一个给定点集自身会有一个熵 Ｈ。熵的计算公式如下，<br><img src="https://img-blog.csdnimg.cn/20200407210332354.png#pic_center" alt="熵的计算"><br>对使用每个特征提取后的结果进行点数统计，通过对连续特征进行离散化处理，统计该特征下对应的最大最小值，排序后采用二分法迭代，确定信息增益最大的节点阈值作为最优特征值。<br>简单理解就是三次利用每一个特征进行分类，对每一次的分类结果计算熵增益，选择熵增益最大的那个特征作为第一个分类的特征。下表为三个特征的熵增益，<img src="https://img-blog.csdnimg.cn/20200407210743857.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70#pic_center" alt="熵增益比较"><br>所以构建的决策树是这样的，<br><img src="https://img-blog.csdnimg.cn/20200407210838207.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70#pic_center" alt="决策树"><h3 id="实验结果分析"><a href="#实验结果分析" class="headerlink" title="实验结果分析"></a>实验结果分析</h3></li>
+</ol>
+<ul>
+<li>优化。由于局部仍包含着部分小面积非建筑物点云。使用欧式聚类，设置最小聚类点的数目阈值，即可实现过滤。</li>
+</ul>
+
+      
+	  
+	    <!-- 添加版权声明 -->
+		  	  
+	  
+	
+	  
+		<div class="declare">
+		  <strong>本文作者：</strong>
+		  
+		    Su Yunzheng
+		  
+		  <br>
+		  <strong>本文链接：</strong>
+		  <a href="https://suyunzzz.github.io/2020/04/07/2018-【激光与光电子学进展】-决策树约束的建筑物点云提取方法/" title="2018-激光与光电子学进展-决策树约束的建筑物点云提取方法" target="_blank">https://suyunzzz.github.io/2020/04/07/2018-【激光与光电子学进展】-决策树约束的建筑物点云提取方法/</a>
+		  <br>
+		  <strong>版权声明：</strong>
+		  本作品采用
+		  <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+		  进行许可。转载请注明出处！
+		  
+		    <br>
+		    <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="知识共享许可协议" style="border-width:0" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png"/></a>
+		  
+		</div>
+	  
+	  <!-- 添加版权声明 -->
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃鸡腿！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/money_alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/money_wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/06/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="archive-article-date">
-  	<time datetime="2020-04-06T12:59:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/06/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">hexo常用命令与发布文章</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">tools</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">论文阅读</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://suyunzzz.github.io/2020/04/07/2018-%E3%80%90%E6%BF%80%E5%85%89%E4%B8%8E%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6%E8%BF%9B%E5%B1%95%E3%80%91-%E5%86%B3%E7%AD%96%E6%A0%91%E7%BA%A6%E6%9D%9F%E7%9A%84%E5%BB%BA%E7%AD%91%E7%89%A9%E7%82%B9%E4%BA%91%E6%8F%90%E5%8F%96%E6%96%B9%E6%B3%95/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-04-06T09:23:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-06</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/07/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85Samba%E6%9C%8D%E5%8A%A1%EF%BC%8C%E6%9E%84%E5%BB%BA%E5%AE%B6%E5%BA%AD%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E7%B3%BB%E7%BB%9F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">树莓派安装Samba服务，构建家庭文件共享系统</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">我的第一篇文章</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">tools</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#摘要"><span class="toc-number">1.</span> <span class="toc-text">摘要</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#研究方法"><span class="toc-number">2.</span> <span class="toc-text">研究方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实验结果分析"><span class="toc-number">3.</span> <span class="toc-text">实验结果分析</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/06/hello-world/" class="archive-article-date">
-  	<time datetime="2020-04-06T08:15:06.023Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-06</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/06/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">tools</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
+  <div id="SOHUCS" sid="2018-【激光与光电子学进展】-决策树约束的建筑物点云提取方法" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cyuM1rE6r",
+        conf: "2ef52572ecf25315002abb8d54a5f85a"
+    });
+</script>
+</script>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -361,9 +473,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
