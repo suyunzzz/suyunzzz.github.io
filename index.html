@@ -200,124 +200,6 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Ubuntu16.04安装ros" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/21/Ubuntu16.04%E5%AE%89%E8%A3%85ros/">Ubuntu16.04安装ros</a>
-    </h1>
-  
-
-		
-		<!--显示阅读次数-->
-		
-		  
-        
-        <a href="/2020/04/21/Ubuntu16.04%E5%AE%89%E8%A3%85ros/" class="archive-article-date">
-  	<time datetime="2020-04-21T09:30:07.324Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>title: ubuntu16.04安装ros+解决sudo rosdep init出错的问题<br>date: 2020-04-21 20:59:15<br>tags: </p>
-<ul>
-<li>ros</li>
-<li>Ubuntu</li>
-</ul>
-<h4 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h4><ol>
-<li><p>ubuntu16.04安装ros</p>
-</li>
-<li><p>解决sudo rosdep init出错的问题</p>
-</li>
-</ol>
-<p>﻿### 准备</p>
-<p>1、ubuntu16.04 64位桌面版</p>
-<p>ps:关于系统的下载和安装这里不做介绍，请自行百度，不是介绍重点</p>
-<p>2、更改源<br><strong>我使用的是清华源</strong><br><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvMTA4MzIxMi8yMDE3MTEvMTA4MzIxMi0yMDE3MTEwMTIxMTcxMDQyMC0xMDkzMjIxNzQ2LnBuZw?x-oss-process=image/format,png" alt=""></p>
-<h3 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">~$ sudo apt-get <span class="keyword">update</span></span><br><span class="line"></span><br><span class="line">~$ sudo sh -c <span class="string">'. /etc/lsb-release &amp;&amp; echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" &gt; /etc/apt/sources.list.d/ros-latest.list'</span></span><br><span class="line"></span><br><span class="line">~$ sudo apt-<span class="keyword">key</span> adv <span class="comment">--keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 0xB01FA116</span></span><br><span class="line"></span><br><span class="line">~$ sudo apt-<span class="keyword">get</span> <span class="keyword">update</span></span><br><span class="line"></span><br><span class="line">~$ sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> ros-kinetic-desktop-<span class="keyword">full</span></span><br></pre></td></tr></table></figure>
-<h5 id="这里会出现一个问题，sudo-apt-get-update由于没有公钥，无法验证下列签名：-NO-PUBKEY-F42ED6FBAB17C654"><a href="#这里会出现一个问题，sudo-apt-get-update由于没有公钥，无法验证下列签名：-NO-PUBKEY-F42ED6FBAB17C654" class="headerlink" title="这里会出现一个问题，sudo apt-get update由于没有公钥，无法验证下列签名： NO_PUBKEY F42ED6FBAB17C654"></a>这里会出现一个问题，<a href="https://blog.csdn.net/weixin_44644341/article/details/92403796" target="_blank" rel="noopener">sudo apt-get update由于没有公钥，无法验证下列签名： NO_PUBKEY F42ED6FBAB17C654</a></h5><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">update</span>由于没有公钥，无法验证下列签名： NO_PUBKEY F42ED6FBAB17C654</span><br></pre></td></tr></table></figure>
-<p>可以这样解决，安装公钥</p>
-<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">sudo</span> <span class="comment">apt</span><span class="literal">-</span><span class="comment">key</span> <span class="comment">adv</span> --<span class="comment">keyserver</span> <span class="comment">keyserver</span><span class="string">.</span><span class="comment">ubuntu</span><span class="string">.</span><span class="comment">com</span> --<span class="comment">recv</span><span class="literal">-</span><span class="comment">keys</span> <span class="comment">F42ED6FBAB17C654</span></span><br></pre></td></tr></table></figure>
-<h3 id="安装完以后"><a href="#安装完以后" class="headerlink" title="安装完以后"></a>安装完以后</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>sudo rosdep init</span><br><span class="line"><span class="variable">$ </span>rosdep update</span><br></pre></td></tr></table></figure>
-<p>这时候会出现一个错误，很烦人的错误。</p>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ERROR: </span>cannot download default sources list from:</span><br><span class="line">https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/sources.list.d/20-default.list</span><br><span class="line">Website may be down.</span><br></pre></td></tr></table></figure>
-<ul>
-<li>参考：<a href="https://blog.csdn.net/u013468614/article/details/102917569" target="_blank" rel="noopener">sudo rosdep init ERROR: cannot download default sources list from:</a><br>采用这位老兄的方案三，使用浏览器打开报错的地址，复制其中的文件，粘贴到位置<em>/etc/ros/rosdep/sources.list.d</em>，文件名为<em>20-default.list</em>。注意这里我没有修改为<strong>github</strong>,粘贴进去就好了。然后<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">rosdep update</span></span><br></pre></td></tr></table></figure>
-仍然报错，<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">reading in sources list data from /etc/ros/rosdep/sources.list.d</span><br><span class="line"><span class="keyword">ERROR: </span>unable to process source [https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/osx-homebrew.yaml]:</span><br><span class="line">	&lt;urlopen error [Errno 111] Connection refused&gt; (https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/osx-homebrew.yaml)</span><br><span class="line"><span class="keyword">ERROR: </span>unable to process source [https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yaml]:</span><br><span class="line">	&lt;urlopen error [Errno 111] Connection refused&gt; (https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yaml)</span><br><span class="line"><span class="keyword">ERROR: </span>unable to process source [https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/python.yaml]:</span><br><span class="line">	&lt;urlopen error [Errno 111] Connection refused&gt; (https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/python.yaml)</span><br><span class="line"><span class="keyword">ERROR: </span>unable to process source [https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/ruby.yaml]:</span><br><span class="line">	&lt;urlopen error [Errno 111] Connection refused&gt; (https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/ruby.yaml)</span><br><span class="line"><span class="keyword">ERROR: </span>unable to process source [https://raw.githubusercontent.com/ros/rosdistro/master/releases/fuerte.yaml]:</span><br><span class="line">	Failed to download target platform data for gbpdistro:</span><br><span class="line">	&lt;urlopen error [Errno 111] Connection refused&gt;</span><br><span class="line">Query rosdistro index https://raw.githubusercontent.com/ros/rosdistro/master/index-v4.yaml</span><br><span class="line"><span class="keyword">ERROR: </span>error loading sources list:</span><br><span class="line">	&lt;urlopen error &lt;urlopen error [Errno 111] Connection refused&gt; (https://raw.githubusercontent.com/ros/rosdistro/master/index-v4.yaml)&gt;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>这时候参考:<a href="https://blog.csdn.net/mrh1714348719/article/details/103803110" target="_blank" rel="noopener">ubuntu安装ROS进行到rosdep update时出现错误，如ERROR: unable to process source …</a></p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit <span class="regexp">/etc/</span>resolv.conf</span><br></pre></td></tr></table></figure>
-<p>在原有的nameserver这一行注释掉，添加下面两行</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">nameserver</span> 8<span class="selector-class">.8</span><span class="selector-class">.8</span><span class="selector-class">.8</span> <span class="selector-id">#google</span>域名服务器</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">nameserver</span> 8<span class="selector-class">.8</span><span class="selector-class">.4</span><span class="selector-class">.4</span> <span class="selector-id">#google</span>域名服务器</span><br></pre></td></tr></table></figure>
-<p>执行</p>
-<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo  apt-<span class="keyword">get</span> <span class="keyword">update</span></span><br></pre></td></tr></table></figure>
-<p>再执行</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">rosdep update</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>结果</strong></p>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">s@s:/etc/ros/rosdep/sources.list.d$ sudo  apt-get update</span><br><span class="line">命中:1 http://mirrors.ustc.edu.cn/ubuntu xenial InRelease</span><br><span class="line">命中:2 http://mirrors.ustc.edu.cn/ros/ubuntu xenial InRelease                  </span><br><span class="line">命中:3 http://ppa.launchpad.net/graphics-drivers/ppa/ubuntu xenial InRelease   </span><br><span class="line">命中:4 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial InRelease</span><br><span class="line">获取:5 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-updates InRelease [109 kB]</span><br><span class="line">获取:6 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-backports InRelease [107 kB]</span><br><span class="line">获取:7 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-security InRelease [109 kB]</span><br><span class="line">获取:8 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-updates/main amd64 DEP<span class="string">-11</span> Metadata [322 kB]</span><br><span class="line">获取:9 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-updates/universe amd64 DEP<span class="string">-11</span> Metadata [276 kB]</span><br><span class="line">获取:10 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-updates/multiverse amd64 DEP<span class="string">-11</span> Metadata [5,980 B]</span><br><span class="line">获取:11 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-backports/main amd64 DEP<span class="string">-11</span> Metadata [3,328 B]</span><br><span class="line">获取:12 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-backports/universe amd64 DEP<span class="string">-11</span> Metadata [5,320 B]</span><br><span class="line">获取:13 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-security/main amd64 DEP<span class="string">-11</span> Metadata [74.8 kB]</span><br><span class="line">获取:14 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-security/universe amd64 DEP<span class="string">-11</span> Metadata [124 kB]</span><br><span class="line">获取:15 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-security/multiverse amd64 DEP<span class="string">-11</span> Metadata [2,464 B]</span><br><span class="line">已下载 1,139 kB，耗时 2秒 (416 kB/s)           </span><br><span class="line">正在读取软件包列表... 完成</span><br><span class="line">s@s:/etc/ros/rosdep/sources.list.d$ </span><br><span class="line">s@s:/etc/ros/rosdep/sources.list.d$ rosdep update</span><br><span class="line">reading in sources list data from /etc/ros/rosdep/sources.list.d</span><br><span class="line">Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/osx-homebrew.yaml</span><br><span class="line">Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yaml</span><br><span class="line">Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/python.yaml</span><br><span class="line">Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/ruby.yaml</span><br><span class="line">Hit https://raw.githubusercontent.com/ros/rosdistro/master/releases/fuerte.yaml</span><br><span class="line">Query rosdistro index https://raw.githubusercontent.com/ros/rosdistro/master/index-v4.yaml</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "ardent"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "bouncy"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "crystal"</span><br><span class="line">Add distro "dashing"</span><br><span class="line">Add distro "eloquent"</span><br><span class="line">Add distro "foxy"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "groovy"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "hydro"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "indigo"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "jade"</span><br><span class="line">Add distro "kinetic"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "lunar"</span><br><span class="line">Add distro "melodic"</span><br><span class="line">Add distro "noetic"</span><br><span class="line">updated cache in /home/s/.ros/rosdep/sources.cache</span><br></pre></td></tr></table></figure>
-<h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="string">"source /opt/ros/kinetic/setup.bash"</span> &gt;&gt; ~<span class="string">/.bashrc</span></span><br><span class="line">source ~<span class="string">/.bashrc</span></span><br></pre></td></tr></table></figure>
-<h3 id="安装building-package的依赖"><a href="#安装building-package的依赖" class="headerlink" title="安装building package的依赖"></a>安装building package的依赖</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install <span class="keyword">python</span>-rosinstall <span class="keyword">python</span>-rosinstall-generator <span class="keyword">python</span>-wstool build-essential</span><br></pre></td></tr></table></figure>
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">roscore</span></span><br><span class="line"></span><br><span class="line"><span class="attr">rosrun</span> <span class="string">turtlesim turtlesim_node</span></span><br><span class="line"></span><br><span class="line"><span class="attr">rosrun</span> <span class="string">turtlesim turtle_teleop_key</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h3><p><a href="https://blog.csdn.net/softimite_zifeng/article/details/78632211" target="_blank" rel="noopener">https://blog.csdn.net/softimite_zifeng/article/details/78632211</a></p>
-
-      
-	  
-	    <!-- 添加版权声明 -->
-		  	  
-	  
-	
-	  
-	    <div class="declare" hidden="hidden"></div>
-	  
-	  <!-- 添加版权声明 -->
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/21/Ubuntu16.04%E5%AE%89%E8%A3%85ros/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-【论文阅读】- 2017-A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1103,10 +985,96 @@ var _hmt = _hmt || [];
 
 
   
+    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/06/hello-world/">Hello World</a>
+    </h1>
+  
+
+		
+		<!--显示阅读次数-->
+		
+		  
+        
+        <a href="/2020/04/06/hello-world/" class="archive-article-date">
+  	<time datetime="2020-04-06T08:15:06.023Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+        
+      
+	  
+	    <!-- 添加版权声明 -->
+		  	  
+	  
+	
+	  
+	    <div class="declare" hidden="hidden"></div>
+	  
+	  <!-- 添加版权声明 -->
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">tools</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/06/hello-world/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
 
 
@@ -1235,15 +1203,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">点云处理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">树莓派</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">点云处理</a>
               </li>
             
             <div class="clearfix"></div>
