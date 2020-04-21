@@ -6,37 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://suyunzzz.github.io">
-  <title>2017-A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds | 那些花儿</title>
+  <title>Ubuntu16.04安装ros | 那些花儿</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Abstract现存的语义分割方法都依赖于大量的特征以及邻域点之间的相互作用，无法发挥他们的潜力。本文提出一个基于CNN的提取高级特征的方法。提出一种将3d点云邻域的特征转化为2d图像的方法。首先，在一个窗口内对每一个点提取他们的局部几何特征、全局几何特征、全波形特征并把特征转为2D图像。然后使用这个生成的图像作为CNN的输入，实现3D语义分割的任务。最后使用ISPRS的数据集进行评估，OverA">
+  <meta name="description" content="title: ubuntu16.04安装ros+解决sudo rosdep init出错的问题date: 2020-04-21 20:59:15tags:   ros Ubuntu  Abstract ubuntu16.04安装ros  解决sudo rosdep init出错的问题   ﻿### 准备 1、ubuntu16.04 64位桌面版 ps:关于系统的下载和安装这里不做介绍，请自行百度，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2017-A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds">
-<meta property="og:url" content="https://suyunzzz.github.io/2020/04/15/%E3%80%90%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E3%80%91-%202017-A%20Convolutional%20Neural%20Network-Based%203D%20Semantic%20Labeling%20Method%20for%20ALS%20Point%20Clouds/index.html">
+<meta property="og:title" content="Ubuntu16.04安装ros">
+<meta property="og:url" content="https://suyunzzz.github.io/2020/04/21/Ubuntu16.04%E5%AE%89%E8%A3%85ros/index.html">
 <meta property="og:site_name" content="那些花儿">
-<meta property="og:description" content="Abstract现存的语义分割方法都依赖于大量的特征以及邻域点之间的相互作用，无法发挥他们的潜力。本文提出一个基于CNN的提取高级特征的方法。提出一种将3d点云邻域的特征转化为2d图像的方法。首先，在一个窗口内对每一个点提取他们的局部几何特征、全局几何特征、全波形特征并把特征转为2D图像。然后使用这个生成的图像作为CNN的输入，实现3D语义分割的任务。最后使用ISPRS的数据集进行评估，OverA">
+<meta property="og:description" content="title: ubuntu16.04安装ros+解决sudo rosdep init出错的问题date: 2020-04-21 20:59:15tags:   ros Ubuntu  Abstract ubuntu16.04安装ros  解决sudo rosdep init出错的问题   ﻿### 准备 1、ubuntu16.04 64位桌面版 ps:关于系统的下载和安装这里不做介绍，请自行百度，">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223525252.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223603851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223632382.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223643645.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223720646.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223733253.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223759874.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223809599.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223820554.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/2020041522383050.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223928172.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223935577.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/2020041522401452.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415224024396.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415224041379.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415224117606.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2020-04-15T15:49:00.000Z">
-<meta property="article:modified_time" content="2020-04-15T14:49:48.466Z">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvMTA4MzIxMi8yMDE3MTEvMTA4MzIxMi0yMDE3MTEwMTIxMTcxMDQyMC0xMDkzMjIxNzQ2LnBuZw?x-oss-process=image/format,png">
+<meta property="article:published_time" content="2020-04-21T09:30:07.324Z">
+<meta property="article:modified_time" content="2020-04-21T09:32:27.344Z">
 <meta property="article:author" content="Su Yunzheng">
-<meta property="article:tag" content="论文阅读">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200415223525252.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70">
+<meta name="twitter:image" content="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvMTA4MzIxMi8yMDE3MTEvMTA4MzIxMi0yMDE3MTEwMTIxMTcxMDQyMC0xMDkzMjIxNzQ2LnBuZw?x-oss-process=image/format,png">
   
     <link rel="alternative" href="/atom.xml" title="那些花儿" type="application/atom+xml">
   
@@ -220,14 +204,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-【论文阅读】- 2017-A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Ubuntu16.04安装ros" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      2017-A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds
+      Ubuntu16.04安装ros
     </h1>
   
 
@@ -244,76 +228,58 @@ var _hmt = _hmt || [];
 		  
 		  
         
-        <a href="/2020/04/15/%E3%80%90%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E3%80%91-%202017-A%20Convolutional%20Neural%20Network-Based%203D%20Semantic%20Labeling%20Method%20for%20ALS%20Point%20Clouds/" class="archive-article-date">
-  	<time datetime="2020-04-15T15:49:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-15</time>
+        <a href="/2020/04/21/Ubuntu16.04%E5%AE%89%E8%A3%85ros/" class="archive-article-date">
+  	<time datetime="2020-04-21T09:30:07.324Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>现存的语义分割方法都依赖于大量的特征以及邻域点之间的相互作用，无法发挥他们的潜力。本文提出一个基于CNN的提取高级特征的方法。提出一种将3d点云邻域的特征转化为2d图像的方法。首先，在一个窗口内对每一个点提取他们的局部几何特征、全局几何特征、全波形特征并把特征转为2D图像。然后使用这个生成的图像作为CNN的输入，实现3D语义分割的任务。最后使用ISPRS的数据集进行评估，OverAll可达到82.3。</p>
-<a id="more"></a>
+        <p>title: ubuntu16.04安装ros+解决sudo rosdep init出错的问题<br>date: 2020-04-21 20:59:15<br>tags: </p>
+<ul>
+<li>ros</li>
+<li>Ubuntu</li>
+</ul>
+<h4 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h4><ol>
+<li><p>ubuntu16.04安装ros</p>
+</li>
+<li><p>解决sudo rosdep init出错的问题</p>
+</li>
+</ol>
+<p>﻿### 准备</p>
+<p>1、ubuntu16.04 64位桌面版</p>
+<p>ps:关于系统的下载和安装这里不做介绍，请自行百度，不是介绍重点</p>
+<p>2、更改源<br><strong>我使用的是清华源</strong><br><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvMTA4MzIxMi8yMDE3MTEvMTA4MzIxMi0yMDE3MTEwMTIxMTcxMDQyMC0xMDkzMjIxNzQ2LnBuZw?x-oss-process=image/format,png" alt=""></p>
+<h3 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">~$ sudo apt-get <span class="keyword">update</span></span><br><span class="line"></span><br><span class="line">~$ sudo sh -c <span class="string">'. /etc/lsb-release &amp;&amp; echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" &gt; /etc/apt/sources.list.d/ros-latest.list'</span></span><br><span class="line"></span><br><span class="line">~$ sudo apt-<span class="keyword">key</span> adv <span class="comment">--keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 0xB01FA116</span></span><br><span class="line"></span><br><span class="line">~$ sudo apt-<span class="keyword">get</span> <span class="keyword">update</span></span><br><span class="line"></span><br><span class="line">~$ sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> ros-kinetic-desktop-<span class="keyword">full</span></span><br></pre></td></tr></table></figure>
+<h5 id="这里会出现一个问题，sudo-apt-get-update由于没有公钥，无法验证下列签名：-NO-PUBKEY-F42ED6FBAB17C654"><a href="#这里会出现一个问题，sudo-apt-get-update由于没有公钥，无法验证下列签名：-NO-PUBKEY-F42ED6FBAB17C654" class="headerlink" title="这里会出现一个问题，sudo apt-get update由于没有公钥，无法验证下列签名： NO_PUBKEY F42ED6FBAB17C654"></a>这里会出现一个问题，<a href="https://blog.csdn.net/weixin_44644341/article/details/92403796" target="_blank" rel="noopener">sudo apt-get update由于没有公钥，无法验证下列签名： NO_PUBKEY F42ED6FBAB17C654</a></h5><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">update</span>由于没有公钥，无法验证下列签名： NO_PUBKEY F42ED6FBAB17C654</span><br></pre></td></tr></table></figure>
+<p>可以这样解决，安装公钥</p>
+<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">sudo</span> <span class="comment">apt</span><span class="literal">-</span><span class="comment">key</span> <span class="comment">adv</span> --<span class="comment">keyserver</span> <span class="comment">keyserver</span><span class="string">.</span><span class="comment">ubuntu</span><span class="string">.</span><span class="comment">com</span> --<span class="comment">recv</span><span class="literal">-</span><span class="comment">keys</span> <span class="comment">F42ED6FBAB17C654</span></span><br></pre></td></tr></table></figure>
+<h3 id="安装完以后"><a href="#安装完以后" class="headerlink" title="安装完以后"></a>安装完以后</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>sudo rosdep init</span><br><span class="line"><span class="variable">$ </span>rosdep update</span><br></pre></td></tr></table></figure>
+<p>这时候会出现一个错误，很烦人的错误。</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ERROR: </span>cannot download default sources list from:</span><br><span class="line">https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/sources.list.d/20-default.list</span><br><span class="line">Website may be down.</span><br></pre></td></tr></table></figure>
+<ul>
+<li>参考：<a href="https://blog.csdn.net/u013468614/article/details/102917569" target="_blank" rel="noopener">sudo rosdep init ERROR: cannot download default sources list from:</a><br>采用这位老兄的方案三，使用浏览器打开报错的地址，复制其中的文件，粘贴到位置<em>/etc/ros/rosdep/sources.list.d</em>，文件名为<em>20-default.list</em>。注意这里我没有修改为<strong>github</strong>,粘贴进去就好了。然后<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">rosdep update</span></span><br></pre></td></tr></table></figure>
+仍然报错，<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">reading in sources list data from /etc/ros/rosdep/sources.list.d</span><br><span class="line"><span class="keyword">ERROR: </span>unable to process source [https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/osx-homebrew.yaml]:</span><br><span class="line">	&lt;urlopen error [Errno 111] Connection refused&gt; (https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/osx-homebrew.yaml)</span><br><span class="line"><span class="keyword">ERROR: </span>unable to process source [https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yaml]:</span><br><span class="line">	&lt;urlopen error [Errno 111] Connection refused&gt; (https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yaml)</span><br><span class="line"><span class="keyword">ERROR: </span>unable to process source [https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/python.yaml]:</span><br><span class="line">	&lt;urlopen error [Errno 111] Connection refused&gt; (https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/python.yaml)</span><br><span class="line"><span class="keyword">ERROR: </span>unable to process source [https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/ruby.yaml]:</span><br><span class="line">	&lt;urlopen error [Errno 111] Connection refused&gt; (https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/ruby.yaml)</span><br><span class="line"><span class="keyword">ERROR: </span>unable to process source [https://raw.githubusercontent.com/ros/rosdistro/master/releases/fuerte.yaml]:</span><br><span class="line">	Failed to download target platform data for gbpdistro:</span><br><span class="line">	&lt;urlopen error [Errno 111] Connection refused&gt;</span><br><span class="line">Query rosdistro index https://raw.githubusercontent.com/ros/rosdistro/master/index-v4.yaml</span><br><span class="line"><span class="keyword">ERROR: </span>error loading sources list:</span><br><span class="line">	&lt;urlopen error &lt;urlopen error [Errno 111] Connection refused&gt; (https://raw.githubusercontent.com/ros/rosdistro/master/index-v4.yaml)&gt;</span><br></pre></td></tr></table></figure>
 
-<p>﻿# A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds</p>
-<ul>
-<li><p>Zhishuang Yang, Wanshou Jiang ,*ID , Bo XuID , Quansheng Zhu , San JiangID and Wei Huang</p>
-</li>
-<li><p>State Key Laboratory of Information Engineering in Surveying, Mapping and Remote Sensing,</p>
 </li>
 </ul>
-<h2 id="Abstract-1"><a href="#Abstract-1" class="headerlink" title="Abstract"></a>Abstract</h2><p>现存的语义分割方法都依赖于大量的特征以及邻域点之间的相互作用，无法发挥他们的潜力。本文提出一个基于CNN的提取高级特征的方法。提出一种将3d点云邻域的特征转化为2d图像的方法。首先，在一个窗口内对每一个点提取他们的局部几何特征、全局几何特征、全波形特征并把特征转为2D图像。然后使用这个生成的图像作为CNN的输入，实现3D语义分割的任务。最后使用ISPRS的数据集进行评估，OverAll可达到82.3。</p>
-<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><p>简单介绍之前的机器学习方法，机器学习方法最大的缺点就是不考虑邻域点的label信息（上下文信息）独立地对每一个点进行分类。因此引入了MRF和CRF以获得各类之间的依赖。</p>
-<p>我们提出了一种根据单点生成特征图像的方法。使用局部几何特征、全局几何特征、全波形特征从邻域点生成特征图像。</p>
-<h2 id="2-Methodology"><a href="#2-Methodology" class="headerlink" title="2. Methodology"></a>2. Methodology</h2><h4 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h4><p>首先，我们将点的分类转换为相应特征图像的分类。然后训练。最后使用模型进行分类。<img src="https://img-blog.csdnimg.cn/20200415223525252.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h4 id="2-1-CNN"><a href="#2-1-CNN" class="headerlink" title="2.1 CNN"></a>2.1 CNN</h4><p><img src="https://img-blog.csdnimg.cn/20200415223603851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>完整的公式如下，</p>
-<p>卷积<br><img src="https://img-blog.csdnimg.cn/20200415223632382.png" alt="在这里插入图片描述"></p>
-<p>全连接<br><img src="https://img-blog.csdnimg.cn/20200415223643645.png" alt="在这里插入图片描述"></p>
-<h4 id="2-2-Feature-Image-Generation"><a href="#2-2-Feature-Image-Generation" class="headerlink" title="2.2 Feature Image Generation"></a>2.2 Feature Image Generation</h4><p>将点云分成128*128个cell，计算每一个cell的中心坐标。</p>
-<p>对每一个cell的中心坐标给定一个固定的半径r，查找其邻域，在其邻域内计算局部几何特征，包括平面性、各向同性、以及法向量和垂直方向之间的角度方差。</p>
-<p>使用软件包SCOP++生成DTM并计算Height above.(应该是归一化高程)，使用该特征可以区分道路和房顶。</p>
-<p>使用全波形雷达特征中的回波强度特征。（The chosen echo intensity values are high on building roofs, on gravels roads, and on cars, while low values are asphalt roads and tar streets [6], which makes these objects easy to distinguish.）</p>
-<p>再计算以上特征后，根据特征计算三通道值，</p>
-<p><img src="https://img-blog.csdnimg.cn/20200415223720646.png" alt="在这里插入图片描述"></p>
-<p>对每一个cell，将根据三通道值赋予颜色rgb，开始的square window就变成了128*128的图像。<br><img src="https://img-blog.csdnimg.cn/20200415223733253.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这样点的空间语义信息就借助于三种特征转变为了一个图像。CNN模型通过这些有限的低级特征图像提取高级表示。</p>
-<h4 id="2-3-Accuracy-Evaluation"><a href="#2-3-Accuracy-Evaluation" class="headerlink" title="2.3 Accuracy Evaluation"></a>2.3 Accuracy Evaluation</h4><p><img src="https://img-blog.csdnimg.cn/20200415223759874.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200415223809599.png" alt="在这里插入图片描述"></p>
-<h2 id="3-Experimental-Result"><a href="#3-Experimental-Result" class="headerlink" title="3. Experimental Result"></a>3. Experimental Result</h2><h4 id="3-1-Dataset"><a href="#3-1-Dataset" class="headerlink" title="3.1 Dataset"></a>3.1 Dataset</h4><p> ISPRS 3D数据集。 contains the spatial XYZ-coordinates, intensity values,the number of returns, and the reference labels.</p>
-<h4 id="3-2-Experiments"><a href="#3-2-Experiments" class="headerlink" title="3.2. Experiments"></a>3.2. Experiments</h4><ul>
-<li><p>对于每一类的点的数量差距过大，进行了class re-balancing</p>
-</li>
-<li><p>The batch gradient descent with a batch size of 128 examples, base learning rate of 0.01,momentum of 0.9, and weight decay of 0.0005 to estimate the CNN parameters is used for training。</p>
-</li>
-<li><p>用5个features和set the width of cell 0.05 m来考虑不同半径的球状邻域的影响</p>
-</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/20200415223820554.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<ul>
-<li>用5个features和set the neighborhood radius to 1 m来考虑cell width 的影响</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/2020041522383050.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<ul>
-<li>最后，选择radius = 1，cell width = 0.05m来考虑5个特征的影响。</li>
-</ul>
-<p>不同的选择如下图，</p>
-<p><img src="https://img-blog.csdnimg.cn/20200415223928172.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>对应的结果如下表，</p>
-<p><img src="https://img-blog.csdnimg.cn/20200415223935577.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>最终的CNN_DEIV方法分类结果如下，</p>
-<p><img src="https://img-blog.csdnimg.cn/2020041522401452.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<ul>
-<li>We use all five features and set the neighborhood radius to 1 m, set the cell width to 0.05 m, and then change the training samples</li>
-</ul>
-<p>不同选择如下图，</p>
-<p><img src="https://img-blog.csdnimg.cn/20200415224024396.png" alt="在这里插入图片描述"><br>结果如下表，</p>
-<p><img src="https://img-blog.csdnimg.cn/20200415224041379.png" alt="在这里插入图片描述"></p>
-<h4 id="3-3-ISPRS-Benchmark-Testing-Results"><a href="#3-3-ISPRS-Benchmark-Testing-Results" class="headerlink" title="3.3 ISPRS Benchmark Testing Results"></a>3.3 ISPRS Benchmark Testing Results</h4><p>不同结果的分类结果如下表，</p>
-<p><img src="https://img-blog.csdnimg.cn/20200415224117606.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="4-Discussion"><a href="#4-Discussion" class="headerlink" title="4. Discussion"></a>4. Discussion</h2><p>There are three main parameters in our work: the neighborhood radius, the cell width, and the feature selection.</p>
-<p>分析了各个参数的选择过程，发现我们方法的效果很大程度上依赖于DTM的质量(Thus, we may state that the performance of the proposed method depends significantly on the quality of the DTM).</p>
-<p>我们的方法效果很好( overall accuracy of our method is ranked 1st, average F1 of the five main categories is ranked 2nd)，并且我们的方法仅仅使用了5个特征。另外，特征的数量可能导致了一些误分类(the low quantities of the features may lead to some misclassifications,such as the powerline, fence/hedge and shrubs have relatively low F1 scores.)。选择一些其他特征(高程方差、回波特征、点密度、hierarchical features )或者在邻域选择阶段采用基于熵最大化的方法(eigen-entropy maximization)可能会提高精度。</p>
-<p>在我们的框架中，一些非常接近的点会有相同的特征图。尽管考虑了点的空间相关性但仍有一些误分类的点。对每一个点生成特征图耗时、耗资源，可以参考 Guninard [39] [Weakly supervised segmentation-aided classification of urban scenes from 3D lidar point clouds] ，采用一种pre-segmentation的方法减少计算负担。该方法应对了噪声并且减少了特征图的数量。</p>
-<h2 id="5-Conclusions"><a href="#5-Conclusions" class="headerlink" title="5. Conclusions"></a>5. Conclusions</h2><p>从邻域选择、增加特征、采用segment-based method三个方面提出了改进，以提高精度，减少计算负担。</p>
+<p>这时候参考:<a href="https://blog.csdn.net/mrh1714348719/article/details/103803110" target="_blank" rel="noopener">ubuntu安装ROS进行到rosdep update时出现错误，如ERROR: unable to process source …</a></p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit <span class="regexp">/etc/</span>resolv.conf</span><br></pre></td></tr></table></figure>
+<p>在原有的nameserver这一行注释掉，添加下面两行</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">nameserver</span> 8<span class="selector-class">.8</span><span class="selector-class">.8</span><span class="selector-class">.8</span> <span class="selector-id">#google</span>域名服务器</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">nameserver</span> 8<span class="selector-class">.8</span><span class="selector-class">.4</span><span class="selector-class">.4</span> <span class="selector-id">#google</span>域名服务器</span><br></pre></td></tr></table></figure>
+<p>执行</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo  apt-<span class="keyword">get</span> <span class="keyword">update</span></span><br></pre></td></tr></table></figure>
+<p>再执行</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">rosdep update</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>结果</strong></p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">s@s:/etc/ros/rosdep/sources.list.d$ sudo  apt-get update</span><br><span class="line">命中:1 http://mirrors.ustc.edu.cn/ubuntu xenial InRelease</span><br><span class="line">命中:2 http://mirrors.ustc.edu.cn/ros/ubuntu xenial InRelease                  </span><br><span class="line">命中:3 http://ppa.launchpad.net/graphics-drivers/ppa/ubuntu xenial InRelease   </span><br><span class="line">命中:4 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial InRelease</span><br><span class="line">获取:5 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-updates InRelease [109 kB]</span><br><span class="line">获取:6 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-backports InRelease [107 kB]</span><br><span class="line">获取:7 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-security InRelease [109 kB]</span><br><span class="line">获取:8 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-updates/main amd64 DEP<span class="string">-11</span> Metadata [322 kB]</span><br><span class="line">获取:9 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-updates/universe amd64 DEP<span class="string">-11</span> Metadata [276 kB]</span><br><span class="line">获取:10 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-updates/multiverse amd64 DEP<span class="string">-11</span> Metadata [5,980 B]</span><br><span class="line">获取:11 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-backports/main amd64 DEP<span class="string">-11</span> Metadata [3,328 B]</span><br><span class="line">获取:12 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-backports/universe amd64 DEP<span class="string">-11</span> Metadata [5,320 B]</span><br><span class="line">获取:13 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-security/main amd64 DEP<span class="string">-11</span> Metadata [74.8 kB]</span><br><span class="line">获取:14 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-security/universe amd64 DEP<span class="string">-11</span> Metadata [124 kB]</span><br><span class="line">获取:15 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-security/multiverse amd64 DEP<span class="string">-11</span> Metadata [2,464 B]</span><br><span class="line">已下载 1,139 kB，耗时 2秒 (416 kB/s)           </span><br><span class="line">正在读取软件包列表... 完成</span><br><span class="line">s@s:/etc/ros/rosdep/sources.list.d$ </span><br><span class="line">s@s:/etc/ros/rosdep/sources.list.d$ rosdep update</span><br><span class="line">reading in sources list data from /etc/ros/rosdep/sources.list.d</span><br><span class="line">Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/osx-homebrew.yaml</span><br><span class="line">Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yaml</span><br><span class="line">Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/python.yaml</span><br><span class="line">Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/ruby.yaml</span><br><span class="line">Hit https://raw.githubusercontent.com/ros/rosdistro/master/releases/fuerte.yaml</span><br><span class="line">Query rosdistro index https://raw.githubusercontent.com/ros/rosdistro/master/index-v4.yaml</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "ardent"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "bouncy"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "crystal"</span><br><span class="line">Add distro "dashing"</span><br><span class="line">Add distro "eloquent"</span><br><span class="line">Add distro "foxy"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "groovy"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "hydro"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "indigo"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "jade"</span><br><span class="line">Add distro "kinetic"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "lunar"</span><br><span class="line">Add distro "melodic"</span><br><span class="line">Add distro "noetic"</span><br><span class="line">updated cache in /home/s/.ros/rosdep/sources.cache</span><br></pre></td></tr></table></figure>
+<h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="string">"source /opt/ros/kinetic/setup.bash"</span> &gt;&gt; ~<span class="string">/.bashrc</span></span><br><span class="line">source ~<span class="string">/.bashrc</span></span><br></pre></td></tr></table></figure>
+<h3 id="安装building-package的依赖"><a href="#安装building-package的依赖" class="headerlink" title="安装building package的依赖"></a>安装building package的依赖</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install <span class="keyword">python</span>-rosinstall <span class="keyword">python</span>-rosinstall-generator <span class="keyword">python</span>-wstool build-essential</span><br></pre></td></tr></table></figure>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">roscore</span></span><br><span class="line"></span><br><span class="line"><span class="attr">rosrun</span> <span class="string">turtlesim turtlesim_node</span></span><br><span class="line"></span><br><span class="line"><span class="attr">rosrun</span> <span class="string">turtlesim turtle_teleop_key</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h3><p><a href="https://blog.csdn.net/softimite_zifeng/article/details/78632211" target="_blank" rel="noopener">https://blog.csdn.net/softimite_zifeng/article/details/78632211</a></p>
 
       
 	  
@@ -329,7 +295,7 @@ var _hmt = _hmt || [];
 		  
 		  <br>
 		  <strong>本文链接：</strong>
-		  <a href="https://suyunzzz.github.io/2020/04/15/【论文阅读】- 2017-A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds/" title="2017-A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds" target="_blank">https://suyunzzz.github.io/2020/04/15/【论文阅读】- 2017-A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds/</a>
+		  <a href="https://suyunzzz.github.io/2020/04/21/Ubuntu16.04安装ros/" title="Ubuntu16.04安装ros" target="_blank">https://suyunzzz.github.io/2020/04/21/Ubuntu16.04安装ros/</a>
 		  <br>
 		  <strong>版权声明：</strong>
 		  本作品采用
@@ -378,17 +344,6 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">论文阅读</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -439,7 +394,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://suyunzzz.github.io/2020/04/15/%E3%80%90%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E3%80%91-%202017-A%20Convolutional%20Neural%20Network-Based%203D%20Semantic%20Labeling%20Method%20for%20ALS%20Point%20Clouds/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://suyunzzz.github.io/2020/04/21/Ubuntu16.04%E5%AE%89%E8%A3%85ros/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -453,18 +408,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2020/04/21/Ubuntu16.04%E5%AE%89%E8%A3%85ros/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Ubuntu16.04安装ros
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/15/PCA%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90%E4%BC%B0%E8%AE%A1%E7%82%B9%E4%BA%91%E6%B3%95%E5%90%91%E9%87%8F(%E5%8E%9F%E7%90%86)/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">PCA主成分分析估计点云法向量（原理）</div>
+    <a href="/2020/04/15/%E3%80%90%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E3%80%91-%202017-A%20Convolutional%20Neural%20Network-Based%203D%20Semantic%20Labeling%20Method%20for%20ALS%20Point%20Clouds/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2017-A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -491,7 +437,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract"><span class="toc-number">1.</span> <span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract-1"><span class="toc-number">2.</span> <span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Introduction"><span class="toc-number">3.</span> <span class="toc-text">1. Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Methodology"><span class="toc-number">4.</span> <span class="toc-text">2. Methodology</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#工作流程"><span class="toc-number">4.0.1.</span> <span class="toc-text">工作流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-CNN"><span class="toc-number">4.0.2.</span> <span class="toc-text">2.1 CNN</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-Feature-Image-Generation"><span class="toc-number">4.0.3.</span> <span class="toc-text">2.2 Feature Image Generation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-Accuracy-Evaluation"><span class="toc-number">4.0.4.</span> <span class="toc-text">2.3 Accuracy Evaluation</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Experimental-Result"><span class="toc-number">5.</span> <span class="toc-text">3. Experimental Result</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-Dataset"><span class="toc-number">5.0.1.</span> <span class="toc-text">3.1 Dataset</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-Experiments"><span class="toc-number">5.0.2.</span> <span class="toc-text">3.2. Experiments</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-ISPRS-Benchmark-Testing-Results"><span class="toc-number">5.0.3.</span> <span class="toc-text">3.3 ISPRS Benchmark Testing Results</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Discussion"><span class="toc-number">6.</span> <span class="toc-text">4. Discussion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Conclusions"><span class="toc-number">7.</span> <span class="toc-text">5. Conclusions</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Abstract"><span class="toc-number">1.</span> <span class="toc-text">Abstract</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开始安装"><span class="toc-number"></span> <span class="toc-text">开始安装</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#这里会出现一个问题，sudo-apt-get-update由于没有公钥，无法验证下列签名：-NO-PUBKEY-F42ED6FBAB17C654"><span class="toc-number">0.1.</span> <span class="toc-text">这里会出现一个问题，sudo apt-get update由于没有公钥，无法验证下列签名： NO_PUBKEY F42ED6FBAB17C654</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装完以后"><span class="toc-number"></span> <span class="toc-text">安装完以后</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置环境"><span class="toc-number"></span> <span class="toc-text">配置环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装building-package的依赖"><span class="toc-number"></span> <span class="toc-text">安装building package的依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试"><span class="toc-number"></span> <span class="toc-text">测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ref"><span class="toc-number"></span> <span class="toc-text">Ref</span></a>
                     </div>
                 </span>
             </div>
@@ -507,7 +453,7 @@ var _hmt = _hmt || [];
   
 
   
-  <div id="SOHUCS" sid="【论文阅读】- 2017-A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds" ></div> 
+  <div id="SOHUCS" sid="Ubuntu16.04安装ros" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({

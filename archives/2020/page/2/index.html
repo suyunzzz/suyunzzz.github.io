@@ -6,37 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://suyunzzz.github.io">
-  <title>2017-A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds | 那些花儿</title>
+  <title>Archives: 2020 | 那些花儿</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Abstract现存的语义分割方法都依赖于大量的特征以及邻域点之间的相互作用，无法发挥他们的潜力。本文提出一个基于CNN的提取高级特征的方法。提出一种将3d点云邻域的特征转化为2d图像的方法。首先，在一个窗口内对每一个点提取他们的局部几何特征、全局几何特征、全波形特征并把特征转为2D图像。然后使用这个生成的图像作为CNN的输入，实现3D语义分割的任务。最后使用ISPRS的数据集进行评估，OverA">
-<meta property="og:type" content="article">
-<meta property="og:title" content="2017-A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds">
-<meta property="og:url" content="https://suyunzzz.github.io/2020/04/15/%E3%80%90%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E3%80%91-%202017-A%20Convolutional%20Neural%20Network-Based%203D%20Semantic%20Labeling%20Method%20for%20ALS%20Point%20Clouds/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="那些花儿">
+<meta property="og:url" content="https://suyunzzz.github.io/archives/2020/page/2/index.html">
 <meta property="og:site_name" content="那些花儿">
-<meta property="og:description" content="Abstract现存的语义分割方法都依赖于大量的特征以及邻域点之间的相互作用，无法发挥他们的潜力。本文提出一个基于CNN的提取高级特征的方法。提出一种将3d点云邻域的特征转化为2d图像的方法。首先，在一个窗口内对每一个点提取他们的局部几何特征、全局几何特征、全波形特征并把特征转为2D图像。然后使用这个生成的图像作为CNN的输入，实现3D语义分割的任务。最后使用ISPRS的数据集进行评估，OverA">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223525252.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223603851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223632382.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223643645.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223720646.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223733253.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223759874.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223809599.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223820554.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/2020041522383050.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223928172.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415223935577.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/2020041522401452.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415224024396.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415224041379.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200415224117606.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2020-04-15T15:49:00.000Z">
-<meta property="article:modified_time" content="2020-04-15T14:49:48.466Z">
 <meta property="article:author" content="Su Yunzheng">
-<meta property="article:tag" content="论文阅读">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200415223525252.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="那些花儿" type="application/atom+xml">
   
@@ -220,306 +198,67 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-【论文阅读】- 2017-A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      2017-A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/04/06/hello-world/" class="archive-article-date">
+  	<time datetime="2020-04-06T08:15:06.023Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-06</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/04/06/hello-world/">Hello World</a>
     </h1>
   
 
-		
-		<!--显示阅读次数-->
-		
-		  <br/>
-		  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
-		  <span class="icon-sort"></span>
-		  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
-					阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
-		  </span>
-		  </a>
-		  
-		  
-        
-        <a href="/2020/04/15/%E3%80%90%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E3%80%91-%202017-A%20Convolutional%20Neural%20Network-Based%203D%20Semantic%20Labeling%20Method%20for%20ALS%20Point%20Clouds/" class="archive-article-date">
-  	<time datetime="2020-04-15T15:49:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>现存的语义分割方法都依赖于大量的特征以及邻域点之间的相互作用，无法发挥他们的潜力。本文提出一个基于CNN的提取高级特征的方法。提出一种将3d点云邻域的特征转化为2d图像的方法。首先，在一个窗口内对每一个点提取他们的局部几何特征、全局几何特征、全波形特征并把特征转为2D图像。然后使用这个生成的图像作为CNN的输入，实现3D语义分割的任务。最后使用ISPRS的数据集进行评估，OverAll可达到82.3。</p>
-<a id="more"></a>
-
-<p>﻿# A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds</p>
-<ul>
-<li><p>Zhishuang Yang, Wanshou Jiang ,*ID , Bo XuID , Quansheng Zhu , San JiangID and Wei Huang</p>
-</li>
-<li><p>State Key Laboratory of Information Engineering in Surveying, Mapping and Remote Sensing,</p>
-</li>
-</ul>
-<h2 id="Abstract-1"><a href="#Abstract-1" class="headerlink" title="Abstract"></a>Abstract</h2><p>现存的语义分割方法都依赖于大量的特征以及邻域点之间的相互作用，无法发挥他们的潜力。本文提出一个基于CNN的提取高级特征的方法。提出一种将3d点云邻域的特征转化为2d图像的方法。首先，在一个窗口内对每一个点提取他们的局部几何特征、全局几何特征、全波形特征并把特征转为2D图像。然后使用这个生成的图像作为CNN的输入，实现3D语义分割的任务。最后使用ISPRS的数据集进行评估，OverAll可达到82.3。</p>
-<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><p>简单介绍之前的机器学习方法，机器学习方法最大的缺点就是不考虑邻域点的label信息（上下文信息）独立地对每一个点进行分类。因此引入了MRF和CRF以获得各类之间的依赖。</p>
-<p>我们提出了一种根据单点生成特征图像的方法。使用局部几何特征、全局几何特征、全波形特征从邻域点生成特征图像。</p>
-<h2 id="2-Methodology"><a href="#2-Methodology" class="headerlink" title="2. Methodology"></a>2. Methodology</h2><h4 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h4><p>首先，我们将点的分类转换为相应特征图像的分类。然后训练。最后使用模型进行分类。<img src="https://img-blog.csdnimg.cn/20200415223525252.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h4 id="2-1-CNN"><a href="#2-1-CNN" class="headerlink" title="2.1 CNN"></a>2.1 CNN</h4><p><img src="https://img-blog.csdnimg.cn/20200415223603851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>完整的公式如下，</p>
-<p>卷积<br><img src="https://img-blog.csdnimg.cn/20200415223632382.png" alt="在这里插入图片描述"></p>
-<p>全连接<br><img src="https://img-blog.csdnimg.cn/20200415223643645.png" alt="在这里插入图片描述"></p>
-<h4 id="2-2-Feature-Image-Generation"><a href="#2-2-Feature-Image-Generation" class="headerlink" title="2.2 Feature Image Generation"></a>2.2 Feature Image Generation</h4><p>将点云分成128*128个cell，计算每一个cell的中心坐标。</p>
-<p>对每一个cell的中心坐标给定一个固定的半径r，查找其邻域，在其邻域内计算局部几何特征，包括平面性、各向同性、以及法向量和垂直方向之间的角度方差。</p>
-<p>使用软件包SCOP++生成DTM并计算Height above.(应该是归一化高程)，使用该特征可以区分道路和房顶。</p>
-<p>使用全波形雷达特征中的回波强度特征。（The chosen echo intensity values are high on building roofs, on gravels roads, and on cars, while low values are asphalt roads and tar streets [6], which makes these objects easy to distinguish.）</p>
-<p>再计算以上特征后，根据特征计算三通道值，</p>
-<p><img src="https://img-blog.csdnimg.cn/20200415223720646.png" alt="在这里插入图片描述"></p>
-<p>对每一个cell，将根据三通道值赋予颜色rgb，开始的square window就变成了128*128的图像。<br><img src="https://img-blog.csdnimg.cn/20200415223733253.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这样点的空间语义信息就借助于三种特征转变为了一个图像。CNN模型通过这些有限的低级特征图像提取高级表示。</p>
-<h4 id="2-3-Accuracy-Evaluation"><a href="#2-3-Accuracy-Evaluation" class="headerlink" title="2.3 Accuracy Evaluation"></a>2.3 Accuracy Evaluation</h4><p><img src="https://img-blog.csdnimg.cn/20200415223759874.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200415223809599.png" alt="在这里插入图片描述"></p>
-<h2 id="3-Experimental-Result"><a href="#3-Experimental-Result" class="headerlink" title="3. Experimental Result"></a>3. Experimental Result</h2><h4 id="3-1-Dataset"><a href="#3-1-Dataset" class="headerlink" title="3.1 Dataset"></a>3.1 Dataset</h4><p> ISPRS 3D数据集。 contains the spatial XYZ-coordinates, intensity values,the number of returns, and the reference labels.</p>
-<h4 id="3-2-Experiments"><a href="#3-2-Experiments" class="headerlink" title="3.2. Experiments"></a>3.2. Experiments</h4><ul>
-<li><p>对于每一类的点的数量差距过大，进行了class re-balancing</p>
-</li>
-<li><p>The batch gradient descent with a batch size of 128 examples, base learning rate of 0.01,momentum of 0.9, and weight decay of 0.0005 to estimate the CNN parameters is used for training。</p>
-</li>
-<li><p>用5个features和set the width of cell 0.05 m来考虑不同半径的球状邻域的影响</p>
-</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/20200415223820554.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<ul>
-<li>用5个features和set the neighborhood radius to 1 m来考虑cell width 的影响</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/2020041522383050.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<ul>
-<li>最后，选择radius = 1，cell width = 0.05m来考虑5个特征的影响。</li>
-</ul>
-<p>不同的选择如下图，</p>
-<p><img src="https://img-blog.csdnimg.cn/20200415223928172.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>对应的结果如下表，</p>
-<p><img src="https://img-blog.csdnimg.cn/20200415223935577.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>最终的CNN_DEIV方法分类结果如下，</p>
-<p><img src="https://img-blog.csdnimg.cn/2020041522401452.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<ul>
-<li>We use all five features and set the neighborhood radius to 1 m, set the cell width to 0.05 m, and then change the training samples</li>
-</ul>
-<p>不同选择如下图，</p>
-<p><img src="https://img-blog.csdnimg.cn/20200415224024396.png" alt="在这里插入图片描述"><br>结果如下表，</p>
-<p><img src="https://img-blog.csdnimg.cn/20200415224041379.png" alt="在这里插入图片描述"></p>
-<h4 id="3-3-ISPRS-Benchmark-Testing-Results"><a href="#3-3-ISPRS-Benchmark-Testing-Results" class="headerlink" title="3.3 ISPRS Benchmark Testing Results"></a>3.3 ISPRS Benchmark Testing Results</h4><p>不同结果的分类结果如下表，</p>
-<p><img src="https://img-blog.csdnimg.cn/20200415224117606.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N1eXVuenp6,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="4-Discussion"><a href="#4-Discussion" class="headerlink" title="4. Discussion"></a>4. Discussion</h2><p>There are three main parameters in our work: the neighborhood radius, the cell width, and the feature selection.</p>
-<p>分析了各个参数的选择过程，发现我们方法的效果很大程度上依赖于DTM的质量(Thus, we may state that the performance of the proposed method depends significantly on the quality of the DTM).</p>
-<p>我们的方法效果很好( overall accuracy of our method is ranked 1st, average F1 of the five main categories is ranked 2nd)，并且我们的方法仅仅使用了5个特征。另外，特征的数量可能导致了一些误分类(the low quantities of the features may lead to some misclassifications,such as the powerline, fence/hedge and shrubs have relatively low F1 scores.)。选择一些其他特征(高程方差、回波特征、点密度、hierarchical features )或者在邻域选择阶段采用基于熵最大化的方法(eigen-entropy maximization)可能会提高精度。</p>
-<p>在我们的框架中，一些非常接近的点会有相同的特征图。尽管考虑了点的空间相关性但仍有一些误分类的点。对每一个点生成特征图耗时、耗资源，可以参考 Guninard [39] [Weakly supervised segmentation-aided classification of urban scenes from 3D lidar point clouds] ，采用一种pre-segmentation的方法减少计算负担。该方法应对了噪声并且减少了特征图的数量。</p>
-<h2 id="5-Conclusions"><a href="#5-Conclusions" class="headerlink" title="5. Conclusions"></a>5. Conclusions</h2><p>从邻域选择、增加特征、采用segment-based method三个方面提出了改进，以提高精度，减少计算负担。</p>
-
-      
-	  
-	    <!-- 添加版权声明 -->
-		  	  
-	  
-	
-	  
-		<div class="declare">
-		  <strong>本文作者：</strong>
-		  
-		    Su Yunzheng
-		  
-		  <br>
-		  <strong>本文链接：</strong>
-		  <a href="https://suyunzzz.github.io/2020/04/15/【论文阅读】- 2017-A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds/" title="2017-A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds" target="_blank">https://suyunzzz.github.io/2020/04/15/【论文阅读】- 2017-A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds/</a>
-		  <br>
-		  <strong>版权声明：</strong>
-		  本作品采用
-		  <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
-		  进行许可。转载请注明出处！
-		  
-		    <br>
-		    <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="知识共享许可协议" style="border-width:0" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png"/></a>
-		  
-		</div>
-	  
-	  <!-- 添加版权声明 -->
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃鸡腿！<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/money_alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/money_wechat.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">论文阅读</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">tools</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://suyunzzz.github.io/2020/04/15/%E3%80%90%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E3%80%91-%202017-A%20Convolutional%20Neural%20Network-Based%203D%20Semantic%20Labeling%20Method%20for%20ALS%20Point%20Clouds/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/04/21/Ubuntu16.04%E5%AE%89%E8%A3%85ros/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Ubuntu16.04安装ros
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/04/15/PCA%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90%E4%BC%B0%E8%AE%A1%E7%82%B9%E4%BA%91%E6%B3%95%E5%90%91%E9%87%8F(%E5%8E%9F%E7%90%86)/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">PCA主成分分析估计点云法向量（原理）</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract"><span class="toc-number">1.</span> <span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract-1"><span class="toc-number">2.</span> <span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Introduction"><span class="toc-number">3.</span> <span class="toc-text">1. Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Methodology"><span class="toc-number">4.</span> <span class="toc-text">2. Methodology</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#工作流程"><span class="toc-number">4.0.1.</span> <span class="toc-text">工作流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-CNN"><span class="toc-number">4.0.2.</span> <span class="toc-text">2.1 CNN</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-Feature-Image-Generation"><span class="toc-number">4.0.3.</span> <span class="toc-text">2.2 Feature Image Generation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-Accuracy-Evaluation"><span class="toc-number">4.0.4.</span> <span class="toc-text">2.3 Accuracy Evaluation</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Experimental-Result"><span class="toc-number">5.</span> <span class="toc-text">3. Experimental Result</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-Dataset"><span class="toc-number">5.0.1.</span> <span class="toc-text">3.1 Dataset</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-Experiments"><span class="toc-number">5.0.2.</span> <span class="toc-text">3.2. Experiments</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-ISPRS-Benchmark-Testing-Results"><span class="toc-number">5.0.3.</span> <span class="toc-text">3.3 ISPRS Benchmark Testing Results</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Discussion"><span class="toc-number">6.</span> <span class="toc-text">4. Discussion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Conclusions"><span class="toc-number">7.</span> <span class="toc-text">5. Conclusions</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-  <div id="SOHUCS" sid="【论文阅读】- 2017-A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds" ></div> 
-<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
-<script type="text/javascript">
-    window.changyan.api.config({
-        appid: "cyuM1rE6r",
-        conf: "2ef52572ecf25315002abb8d54a5f85a"
-    });
-</script>
-</script>
-  
-
-  
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2020/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2020/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -546,8 +285,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
