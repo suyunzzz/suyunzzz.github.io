@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://suyunzzz.github.io">
-  <title>Archives | 那些花儿</title>
+  <title>ros安装 | 那些花儿</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="那些花儿">
-<meta property="og:url" content="https://suyunzzz.github.io/archives/index.html">
+  <meta name="description" content="Abstract ubuntu16.04安装ros 解决sudo rosdep init出错的问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ros安装">
+<meta property="og:url" content="https://suyunzzz.github.io/2020/04/21/ros%E5%AE%89%E8%A3%85/index.html">
 <meta property="og:site_name" content="那些花儿">
+<meta property="og:description" content="Abstract ubuntu16.04安装ros 解决sudo rosdep init出错的问题">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvMTA4MzIxMi8yMDE3MTEvMTA4MzIxMi0yMDE3MTEwMTIxMTcxMDQyMC0xMDkzMjIxNzQ2LnBuZw?x-oss-process=image/format,png">
+<meta property="article:published_time" content="2020-04-21T09:57:04.000Z">
+<meta property="article:modified_time" content="2020-04-21T09:58:50.669Z">
 <meta property="article:author" content="Su Yunzheng">
+<meta property="article:tag" content="ros">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvMTA4MzIxMi8yMDE3MTEvMTA4MzIxMi0yMDE3MTEwMTIxMTcxMDQyMC0xMDkzMjIxNzQ2LnBuZw?x-oss-process=image/format,png">
   
     <link rel="alternative" href="/atom.xml" title="那些花儿" type="application/atom+xml">
   
@@ -198,74 +205,154 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-ros安装" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/21/ubuntu%E5%AE%89%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2020-04-21T09:59:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-21</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/21/ubuntu%E5%AE%89%E8%A3%85/">ubuntu安装</a>
+    <h1 class="article-title" itemprop="name">
+      ros安装
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">ubuntu</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/21/ros%E5%AE%89%E8%A3%85/" class="archive-article-date">
+		
+		<!--显示阅读次数-->
+		
+		  <br/>
+		  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+		  <span class="icon-sort"></span>
+		  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+					阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+		  </span>
+		  </a>
+		  
+		  
+        
+        <a href="/2020/04/21/ros%E5%AE%89%E8%A3%85/" class="archive-article-date">
   	<time datetime="2020-04-21T09:57:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-21</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/21/ros%E5%AE%89%E8%A3%85/">ros安装</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h4><ol>
+<li>ubuntu16.04安装ros</li>
+<li>解决sudo rosdep init出错的问题</li>
+</ol>
+<hr>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>1、ubuntu16.04 64位桌面版</p>
+<p>ps:关于系统的下载和安装这里不做介绍，请自行百度，不是介绍重点</p>
+<p>2、更改源<br><strong>我使用的是清华源</strong><br><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvMTA4MzIxMi8yMDE3MTEvMTA4MzIxMi0yMDE3MTEwMTIxMTcxMDQyMC0xMDkzMjIxNzQ2LnBuZw?x-oss-process=image/format,png" alt=""></p>
+<h3 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">~$ sudo apt-get <span class="keyword">update</span></span><br><span class="line"></span><br><span class="line">~$ sudo sh -c <span class="string">'. /etc/lsb-release &amp;&amp; echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" &gt; /etc/apt/sources.list.d/ros-latest.list'</span></span><br><span class="line"></span><br><span class="line">~$ sudo apt-<span class="keyword">key</span> adv <span class="comment">--keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 0xB01FA116</span></span><br><span class="line"></span><br><span class="line">~$ sudo apt-<span class="keyword">get</span> <span class="keyword">update</span></span><br><span class="line"></span><br><span class="line">~$ sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> ros-kinetic-desktop-<span class="keyword">full</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="这里会出现一个问题，sudo-apt-get-update由于没有公钥，无法验证下列签名：-NO-PUBKEY-F42ED6FBAB17C654"><a href="#这里会出现一个问题，sudo-apt-get-update由于没有公钥，无法验证下列签名：-NO-PUBKEY-F42ED6FBAB17C654" class="headerlink" title="这里会出现一个问题，sudo apt-get update由于没有公钥，无法验证下列签名： NO_PUBKEY F42ED6FBAB17C654"></a>这里会出现一个问题，<a href="https://blog.csdn.net/weixin_44644341/article/details/92403796" target="_blank" rel="noopener">sudo apt-get update由于没有公钥，无法验证下列签名： NO_PUBKEY F42ED6FBAB17C654</a></h5><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">update</span>由于没有公钥，无法验证下列签名： NO_PUBKEY F42ED6FBAB17C654</span><br></pre></td></tr></table></figure>
+
+<p>可以这样解决，安装公钥</p>
+<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">sudo</span> <span class="comment">apt</span><span class="literal">-</span><span class="comment">key</span> <span class="comment">adv</span> --<span class="comment">keyserver</span> <span class="comment">keyserver</span><span class="string">.</span><span class="comment">ubuntu</span><span class="string">.</span><span class="comment">com</span> --<span class="comment">recv</span><span class="literal">-</span><span class="comment">keys</span> <span class="comment">F42ED6FBAB17C654</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="安装完以后"><a href="#安装完以后" class="headerlink" title="安装完以后"></a>安装完以后</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>sudo rosdep init</span><br><span class="line"><span class="variable">$ </span>rosdep update</span><br></pre></td></tr></table></figure>
+
+<p>这时候会出现一个错误，很烦人的错误。</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ERROR: </span>cannot download default sources list from:</span><br><span class="line">https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/sources.list.d/20-default.list</span><br><span class="line">Website may be down.</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>参考：<a href="https://blog.csdn.net/u013468614/article/details/102917569" target="_blank" rel="noopener">sudo rosdep init ERROR: cannot download default sources list from:</a><br>采用这位老兄的方案三，使用浏览器打开报错的地址，复制其中的文件，粘贴到位置<em>/etc/ros/rosdep/sources.list.d</em>，文件名为<em>20-default.list</em>。注意这里我没有修改为<strong>github</strong>,粘贴进去就好了。然后</li>
+</ul>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">rosdep update</span></span><br></pre></td></tr></table></figure>
+
+<p>仍然报错，</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">reading in sources list data from /etc/ros/rosdep/sources.list.d</span><br><span class="line"><span class="keyword">ERROR: </span>unable to process source [https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/osx-homebrew.yaml]:</span><br><span class="line">	&lt;urlopen error [Errno 111] Connection refused&gt; (https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/osx-homebrew.yaml)</span><br><span class="line"><span class="keyword">ERROR: </span>unable to process source [https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yaml]:</span><br><span class="line">	&lt;urlopen error [Errno 111] Connection refused&gt; (https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yaml)</span><br><span class="line"><span class="keyword">ERROR: </span>unable to process source [https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/python.yaml]:</span><br><span class="line">	&lt;urlopen error [Errno 111] Connection refused&gt; (https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/python.yaml)</span><br><span class="line"><span class="keyword">ERROR: </span>unable to process source [https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/ruby.yaml]:</span><br><span class="line">	&lt;urlopen error [Errno 111] Connection refused&gt; (https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/ruby.yaml)</span><br><span class="line"><span class="keyword">ERROR: </span>unable to process source [https://raw.githubusercontent.com/ros/rosdistro/master/releases/fuerte.yaml]:</span><br><span class="line">	Failed to download target platform data for gbpdistro:</span><br><span class="line">	&lt;urlopen error [Errno 111] Connection refused&gt;</span><br><span class="line">Query rosdistro index https://raw.githubusercontent.com/ros/rosdistro/master/index-v4.yaml</span><br><span class="line"><span class="keyword">ERROR: </span>error loading sources list:</span><br><span class="line">	&lt;urlopen error &lt;urlopen error [Errno 111] Connection refused&gt; (https://raw.githubusercontent.com/ros/rosdistro/master/index-v4.yaml)&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这时候参考:<a href="https://blog.csdn.net/mrh1714348719/article/details/103803110" target="_blank" rel="noopener">ubuntu安装ROS进行到rosdep update时出现错误，如ERROR: unable to process source …</a></p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit <span class="regexp">/etc/</span>resolv.conf</span><br></pre></td></tr></table></figure>
+
+<p>在原有的nameserver这一行注释掉，添加下面两行</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">nameserver</span> 8<span class="selector-class">.8</span><span class="selector-class">.8</span><span class="selector-class">.8</span> <span class="selector-id">#google</span>域名服务器</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">nameserver</span> 8<span class="selector-class">.8</span><span class="selector-class">.4</span><span class="selector-class">.4</span> <span class="selector-id">#google</span>域名服务器</span><br></pre></td></tr></table></figure>
+
+<p>执行</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo  apt-<span class="keyword">get</span> <span class="keyword">update</span></span><br></pre></td></tr></table></figure>
+
+<p>再执行</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">rosdep update</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>结果</strong></p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">s@s:/etc/ros/rosdep/sources.list.d$ sudo  apt-get update</span><br><span class="line">命中:1 http://mirrors.ustc.edu.cn/ubuntu xenial InRelease</span><br><span class="line">命中:2 http://mirrors.ustc.edu.cn/ros/ubuntu xenial InRelease                  </span><br><span class="line">命中:3 http://ppa.launchpad.net/graphics-drivers/ppa/ubuntu xenial InRelease   </span><br><span class="line">命中:4 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial InRelease</span><br><span class="line">获取:5 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-updates InRelease [109 kB]</span><br><span class="line">获取:6 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-backports InRelease [107 kB]</span><br><span class="line">获取:7 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-security InRelease [109 kB]</span><br><span class="line">获取:8 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-updates/main amd64 DEP<span class="string">-11</span> Metadata [322 kB]</span><br><span class="line">获取:9 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-updates/universe amd64 DEP<span class="string">-11</span> Metadata [276 kB]</span><br><span class="line">获取:10 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-updates/multiverse amd64 DEP<span class="string">-11</span> Metadata [5,980 B]</span><br><span class="line">获取:11 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-backports/main amd64 DEP<span class="string">-11</span> Metadata [3,328 B]</span><br><span class="line">获取:12 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-backports/universe amd64 DEP<span class="string">-11</span> Metadata [5,320 B]</span><br><span class="line">获取:13 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-security/main amd64 DEP<span class="string">-11</span> Metadata [74.8 kB]</span><br><span class="line">获取:14 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-security/universe amd64 DEP<span class="string">-11</span> Metadata [124 kB]</span><br><span class="line">获取:15 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-security/multiverse amd64 DEP<span class="string">-11</span> Metadata [2,464 B]</span><br><span class="line">已下载 1,139 kB，耗时 2秒 (416 kB/s)           </span><br><span class="line">正在读取软件包列表... 完成</span><br><span class="line">s@s:/etc/ros/rosdep/sources.list.d$ </span><br><span class="line">s@s:/etc/ros/rosdep/sources.list.d$ rosdep update</span><br><span class="line">reading in sources list data from /etc/ros/rosdep/sources.list.d</span><br><span class="line">Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/osx-homebrew.yaml</span><br><span class="line">Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yaml</span><br><span class="line">Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/python.yaml</span><br><span class="line">Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/ruby.yaml</span><br><span class="line">Hit https://raw.githubusercontent.com/ros/rosdistro/master/releases/fuerte.yaml</span><br><span class="line">Query rosdistro index https://raw.githubusercontent.com/ros/rosdistro/master/index-v4.yaml</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "ardent"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "bouncy"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "crystal"</span><br><span class="line">Add distro "dashing"</span><br><span class="line">Add distro "eloquent"</span><br><span class="line">Add distro "foxy"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "groovy"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "hydro"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "indigo"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "jade"</span><br><span class="line">Add distro "kinetic"</span><br><span class="line"><span class="keyword">Skip </span>end-of-life distro "lunar"</span><br><span class="line">Add distro "melodic"</span><br><span class="line">Add distro "noetic"</span><br><span class="line">updated cache in /home/s/.ros/rosdep/sources.cache</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="string">"source /opt/ros/kinetic/setup.bash"</span> &gt;&gt; ~<span class="string">/.bashrc</span></span><br><span class="line">source ~<span class="string">/.bashrc</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="安装building-package的依赖"><a href="#安装building-package的依赖" class="headerlink" title="安装building package的依赖"></a>安装building package的依赖</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install <span class="keyword">python</span>-rosinstall <span class="keyword">python</span>-rosinstall-generator <span class="keyword">python</span>-wstool build-essential</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">roscore</span></span><br><span class="line"></span><br><span class="line"><span class="attr">rosrun</span> <span class="string">turtlesim turtlesim_node</span></span><br><span class="line"></span><br><span class="line"><span class="attr">rosrun</span> <span class="string">turtlesim turtle_teleop_key</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h3><p><a href="https://blog.csdn.net/softimite_zifeng/article/details/78632211" target="_blank" rel="noopener">https://blog.csdn.net/softimite_zifeng/article/details/78632211</a></p>
+
+      
+	  
+	    <!-- 添加版权声明 -->
+		  	  
+	  
+	
+	  
+		<div class="declare">
+		  <strong>本文作者：</strong>
+		  
+		    Su Yunzheng
+		  
+		  <br>
+		  <strong>本文链接：</strong>
+		  <a href="https://suyunzzz.github.io/2020/04/21/ros安装/" title="ros安装" target="_blank">https://suyunzzz.github.io/2020/04/21/ros安装/</a>
+		  <br>
+		  <strong>版权声明：</strong>
+		  本作品采用
+		  <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+		  进行许可。转载请注明出处！
+		  
+		    <br>
+		    <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="知识共享许可协议" style="border-width:0" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png"/></a>
+		  
+		</div>
+	  
+	  <!-- 添加版权声明 -->
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃鸡腿！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/money_alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/money_wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -277,326 +364,137 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://suyunzzz.github.io/2020/04/21/ros%E5%AE%89%E8%A3%85/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/15/%E3%80%90%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E3%80%91-%202017-A%20Convolutional%20Neural%20Network-Based%203D%20Semantic%20Labeling%20Method%20for%20ALS%20Point%20Clouds/" class="archive-article-date">
-  	<time datetime="2020-04-15T15:49:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-15</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/04/21/ubuntu%E5%AE%89%E8%A3%85/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          ubuntu安装
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/04/15/%E3%80%90%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E3%80%91-%202017-A%20Convolutional%20Neural%20Network-Based%203D%20Semantic%20Labeling%20Method%20for%20ALS%20Point%20Clouds/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2017-A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/15/%E3%80%90%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E3%80%91-%202017-A%20Convolutional%20Neural%20Network-Based%203D%20Semantic%20Labeling%20Method%20for%20ALS%20Point%20Clouds/">2017-A Convolutional Neural Network-Based 3D Semantic Labeling Method for ALS Point Clouds</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">论文阅读</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Abstract"><span class="toc-number">1.</span> <span class="toc-text">Abstract</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#准备"><span class="toc-number"></span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开始安装"><span class="toc-number"></span> <span class="toc-text">开始安装</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#这里会出现一个问题，sudo-apt-get-update由于没有公钥，无法验证下列签名：-NO-PUBKEY-F42ED6FBAB17C654"><span class="toc-number">0.1.</span> <span class="toc-text">这里会出现一个问题，sudo apt-get update由于没有公钥，无法验证下列签名： NO_PUBKEY F42ED6FBAB17C654</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装完以后"><span class="toc-number"></span> <span class="toc-text">安装完以后</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置环境"><span class="toc-number"></span> <span class="toc-text">配置环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装building-package的依赖"><span class="toc-number"></span> <span class="toc-text">安装building package的依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试"><span class="toc-number"></span> <span class="toc-text">测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ref"><span class="toc-number"></span> <span class="toc-text">Ref</span></a>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/15/PCA%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90%E4%BC%B0%E8%AE%A1%E7%82%B9%E4%BA%91%E6%B3%95%E5%90%91%E9%87%8F(%E5%8E%9F%E7%90%86)/" class="archive-article-date">
-  	<time datetime="2020-04-15T06:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-15</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/15/PCA%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90%E4%BC%B0%E8%AE%A1%E7%82%B9%E4%BA%91%E6%B3%95%E5%90%91%E9%87%8F(%E5%8E%9F%E7%90%86)/">PCA主成分分析估计点云法向量（原理）</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">点云处理</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/11/2019-%E3%80%90%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E3%80%91-CLASSIFICATION%20OF%20AERIAL%20POINT%20CLOUDS%20WITH%20DEEP%20LEARNING/" class="archive-article-date">
-  	<time datetime="2020-04-11T13:59:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/11/2019-%E3%80%90%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E3%80%91-CLASSIFICATION%20OF%20AERIAL%20POINT%20CLOUDS%20WITH%20DEEP%20LEARNING/">2019-CLASSIFICATION OF AERIAL POINT CLOUDS WITH DEEP LEARNING</a>
-    </h1>
+  <div id="SOHUCS" sid="ros安装" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cyuM1rE6r",
+        conf: "2ef52572ecf25315002abb8d54a5f85a"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">论文阅读</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/09/2018-%E3%80%90%E4%B8%AD%E5%9B%BD%E6%BF%80%E5%85%89%E3%80%91-%E5%9F%BA%E4%BA%8E%E5%88%87%E7%89%87%E9%87%87%E6%A0%B7%E5%92%8C%E8%B4%A8%E5%BF%83%E8%B7%9D%E7%9B%B4%E6%96%B9%E5%9B%BE%E7%89%B9%E5%BE%81%E7%9A%84%E5%AE%A4%E5%A4%96%E5%A4%A7%E5%9C%BA%E6%99%AF%E4%B8%89%E7%BB%B4%E7%82%B9%E4%BA%91%E5%88%86%E7%B1%BB/" class="archive-article-date">
-  	<time datetime="2020-04-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/09/2018-%E3%80%90%E4%B8%AD%E5%9B%BD%E6%BF%80%E5%85%89%E3%80%91-%E5%9F%BA%E4%BA%8E%E5%88%87%E7%89%87%E9%87%87%E6%A0%B7%E5%92%8C%E8%B4%A8%E5%BF%83%E8%B7%9D%E7%9B%B4%E6%96%B9%E5%9B%BE%E7%89%B9%E5%BE%81%E7%9A%84%E5%AE%A4%E5%A4%96%E5%A4%A7%E5%9C%BA%E6%99%AF%E4%B8%89%E7%BB%B4%E7%82%B9%E4%BA%91%E5%88%86%E7%B1%BB/">2018-【中国激光】-基于切片采样和质心距直方图特征的室外大场景三维点云分类</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">论文阅读</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/07/2017-%E3%80%90%E6%B5%8B%E7%BB%98%E5%AD%A6%E6%8A%A5%E3%80%91-%E7%82%B9%E4%BA%91%E4%BF%A1%E6%81%AF%E6%8F%90%E5%8F%96%E7%A0%94%E7%A9%B6%E8%BF%9B%E5%B1%95%E5%92%8C%E5%B1%95%E6%9C%9B/" class="archive-article-date">
-  	<time datetime="2020-04-07T15:49:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/07/2017-%E3%80%90%E6%B5%8B%E7%BB%98%E5%AD%A6%E6%8A%A5%E3%80%91-%E7%82%B9%E4%BA%91%E4%BF%A1%E6%81%AF%E6%8F%90%E5%8F%96%E7%A0%94%E7%A9%B6%E8%BF%9B%E5%B1%95%E5%92%8C%E5%B1%95%E6%9C%9B/">2017-【测绘学报】-点云信息提取研究进展和展望</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">论文阅读</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/07/2018-%E3%80%90%E6%BF%80%E5%85%89%E4%B8%8E%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6%E8%BF%9B%E5%B1%95%E3%80%91-%E5%86%B3%E7%AD%96%E6%A0%91%E7%BA%A6%E6%9D%9F%E7%9A%84%E5%BB%BA%E7%AD%91%E7%89%A9%E7%82%B9%E4%BA%91%E6%8F%90%E5%8F%96%E6%96%B9%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-04-07T13:13:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/07/2018-%E3%80%90%E6%BF%80%E5%85%89%E4%B8%8E%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6%E8%BF%9B%E5%B1%95%E3%80%91-%E5%86%B3%E7%AD%96%E6%A0%91%E7%BA%A6%E6%9D%9F%E7%9A%84%E5%BB%BA%E7%AD%91%E7%89%A9%E7%82%B9%E4%BA%91%E6%8F%90%E5%8F%96%E6%96%B9%E6%B3%95/">2018-【激光与光电子学进展】-决策树约束的建筑物点云提取方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">论文阅读</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/07/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85Samba%E6%9C%8D%E5%8A%A1%EF%BC%8C%E6%9E%84%E5%BB%BA%E5%AE%B6%E5%BA%AD%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E7%B3%BB%E7%BB%9F/" class="archive-article-date">
-  	<time datetime="2020-04-07T05:50:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/07/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85Samba%E6%9C%8D%E5%8A%A1%EF%BC%8C%E6%9E%84%E5%BB%BA%E5%AE%B6%E5%BA%AD%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E7%B3%BB%E7%BB%9F/">树莓派安装Samba服务，构建家庭文件共享系统</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">树莓派</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/06/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="archive-article-date">
-  	<time datetime="2020-04-06T12:59:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/06/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">hexo常用命令与发布文章</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">tools</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -623,8 +521,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
